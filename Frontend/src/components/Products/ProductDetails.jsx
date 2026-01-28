@@ -50,8 +50,18 @@ const selectedProduct = {
 
 const similarProducts = [
   { _id: 1, name: "Outdoor DogHouse (Large)", price: 17999, images: dogHouse },
-  { _id: 2, name: "Tropica Raincoat (Small)", price: 1999, images: dogRaincoat },
-  { _id: 3, name: "Veronica Premium Leather leash", price: 3499, images: leatherBelt },
+  {
+    _id: 2,
+    name: "Tropica Raincoat (Small)",
+    price: 1999,
+    images: dogRaincoat,
+  },
+  {
+    _id: 3,
+    name: "Veronica Premium Leather leash",
+    price: 3499,
+    images: leatherBelt,
+  },
   { _id: 4, name: "PlayHere Ballset for Dogs", price: 599, images: ballSet },
 ];
 
@@ -77,7 +87,7 @@ const ProductDetails = () => {
     setSelectedFlavour(flavour);
 
     const matchedImage = selectedProduct.flavourImg.find(
-      (item) => item.alText === flavour
+      (item) => item.alText === flavour,
     );
 
     if (matchedImage) {
@@ -100,14 +110,12 @@ const ProductDetails = () => {
     }, 500);
   };
 
-  const { price, originalPrice } =
-    selectedProduct.sizePricing[selectedSize];
+  const { price, originalPrice } = selectedProduct.sizePricing[selectedSize];
 
   return (
     <div className="p-6">
       <div className="max-w-6xl mx-auto bg-white p-8 rounded-lg">
         <div className="flex flex-col md:flex-row">
-
           {/* Left Thumbnails */}
           <div className="hidden md:flex flex-col space-y-4 mr-6">
             {selectedProduct.images.map((image, index) => (
@@ -158,16 +166,10 @@ const ProductDetails = () => {
             </h1>
 
             {/* ✅ dynamic price */}
-            <p className="text-gray-500 line-through">
-              ₹{originalPrice}
-            </p>
-            <p className="text-xl text-gray-800 mb-4">
-              ₹{price}
-            </p>
+            <p className="text-gray-500 line-through">₹{originalPrice}</p>
+            <p className="text-xl text-gray-800 mb-4">₹{price}</p>
 
-            <p className="text-gray-600 mb-4">
-              {selectedProduct.description}
-            </p>
+            <p className="text-gray-600 mb-4">{selectedProduct.description}</p>
 
             {/* Flavours */}
             <div className="mb-4">
