@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 
 const Collections = () => {
   const collections = [
-    { img: Care, alt: "Care", query: "care" },
-    { img: Feeding, alt: "Feeding", query: "feeding" },
-    { img: Game, alt: "Game", query: "game" },
-    { img: Walk, alt: "Walk", query: "walk" },
+    { img: Care, alt: "Care", query: "care", link:"/health&supplements" },
+    { img: Feeding, alt: "Feeding", query: "feeding",link:"/food&treats" },
+    { img: Game, alt: "Game", query: "game",link:"/toys&fun" },
+    { img: Walk, alt: "Walk", query: "walk",link:"/grooming&care" },
   ];
 
   return (
@@ -21,7 +21,7 @@ const Collections = () => {
             key={index}
             className="relative overflow-hidden rounded-2xl group shadow-md hover:shadow-xl transition-shadow duration-300"
           >
-            <Link to={`/collections/all?${item.query}`}>
+            <Link to={item.link}>
               <img
                 src={item.img}
                 alt={item.alt}
