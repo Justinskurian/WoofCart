@@ -11,9 +11,9 @@ import GroomingAndCare from "./pages/GroomingAndCare";
 import ToysAndFun from "./pages/ToysAndFun";
 import Checkout from "./components/Cart/Checkout";
 import OrderConfirmation from "./pages/OrderConfirmation";
-import ProductDetails from "./components/Products/ProductDetails";
 import OrderDetailsPage from "./pages/OrderDetailsPage";
 import MyOrdersPage from "./pages/MyOrdersPage";
+import ProductDetails from "./components/Products/ProductDetails";
 
 function App() {
   return (
