@@ -6,6 +6,13 @@ import { FiPhoneCall } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const shopLinks = [
+    { label: "Health & Supplements", path: "/health&supplements" },
+    { label: "Food & Treats", path: "/food&treats" },
+    { label: "Grooming & Care", path: "/grooming&care" },
+    { label: "Toys & Fun", path: "/toys&fun" },
+  ];
+
   return (
     <footer className="bg-[#295840] text-white">
       {/* Main Footer */}
@@ -54,15 +61,10 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Shop</h3>
           <ul className="space-y-2 text-gray-300">
-            {[
-              "Health & Supplements",
-              "Food & Treats",
-              "Grooming & Care",
-              "Toys & Fun",
-            ].map((item) => (
-              <li key={item}>
-                <Link to="#" className="hover:text-white transition">
-                  {item}
+            {shopLinks.map((item) => (
+              <li key={item.path}>
+                <Link to={item.path} className="hover:text-white transition">
+                  {item.label}
                 </Link>
               </li>
             ))}
