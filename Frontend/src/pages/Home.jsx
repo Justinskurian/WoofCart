@@ -3,7 +3,7 @@ import Hero from "../components/Layout/Hero";
 import Collections from "../components/Products/Collections";
 import BestSellers from "../components/Products/BestSellers";
 import ProductGrid from "../components/Products/ProductGrid";
-import ProductDetails from "../components/Products/Productdetails";
+import ProductDetails from "../components/Products/ProductDetails";
 import FeaturedCollection from "../components/Products/FeaturedCollection";
 import FeaturesSection from "../components/Products/FeaturesSection";
 import collarBlack from "../assets/Collar_Black.webp";
